@@ -2,8 +2,11 @@
   "name": "@vue-interface/date-filter",
   "version": "0.8.1",
   "description": "A Vue date filter using day.js.",
-  "main": "index.js",
+  "main": "./dist/DateFilter.umd.js.js",
   "scripts": {
+    "watch": "npm run serve",
+    "serve": "vue-cli-service build --target lib --name=DateFilter ./index.js --watch",
+    "build": "vue-cli-service build --target lib --name=DateFilter ./index.js",
     "pre-release": "npm run docs:build; git add . -A; git commit -m 'pre-release commit'",
     "release-patch": "npm run pre-release && npm version patch -m \"%s\" && npm run release;",
     "release-minor": "npm run pre-release && npm version minor -m \"%s\" && npm run release;",
@@ -32,25 +35,30 @@
   },
   "homepage": "https://github.com/vue-interface/date-filter/docs#readme",
   "devDependencies": {
-    "@babel/preset-env": "^7.10.3",
-    "@vue/cli-plugin-babel": "^4.0",
-    "@vue/cli-plugin-eslint": "^4.0",
-    "@vue/cli-plugin-unit-jest": "^4.4.1",
-    "@vue/cli-service": "^4.0",
-    "@vuepress/plugin-register-components": "^1.5.2",
+    "@babel/preset-env": "^7.11.5",
+    "@vue/cli-plugin-babel": "^4.5.7",
+    "@vue/cli-plugin-eslint": "^4.5.7",
+    "@vue/cli-plugin-unit-jest": "^4.5.7",
+    "@vue/cli-service": "^4.5.7",
+    "@vuepress/plugin-register-components": "^1.6.0",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.1.0",
+    "babel-jest": "^26.5.2",
     "cross-env": "^7.0.2",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "jest": "^26.1.0",
+    "eslint": "^7.10.0",
+    "eslint-plugin-vue": "^7.0.1",
+    "jest": "^26.5.2",
     "markdown-it-meta": "0.0.1",
-    "vue-template-compiler": "^2.6.11",
-    "vuepress": "^1.5.2",
+    "vue-template-compiler": "^2.6.12",
+    "vuepress": "^1.6.0",
     "vuepress-plugin-template-constants": "^0.2.1",
     "webpack-manifest-plugin": "^2.2.0"
   },
   "dependencies": {
-    "dayjs": "^1.8.31"
-  }
+    "dayjs": "^1.9.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }

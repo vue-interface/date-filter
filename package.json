@@ -3,6 +3,7 @@
   "version": "0.9.0",
   "description": "A Vue date filter using day.js.",
   "files": [
+    "index.js",
     "src",
     "dist",
     "tailwindcss"
